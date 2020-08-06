@@ -2,7 +2,7 @@
 
 Everything starts with **Todo**
 
-Live Preview: https://beary.github.io/vite-example/
+Live Preview: https://beary.me/vite-example/
 
 ```bash
 $ git clone https://github.com/beary/vite-example
