@@ -1,0 +1,1 @@
+import{d as t,j as n}from"./index.d05c658a.js";const o={name:String,btnText:String,onBtnClick:Function},s=t(t=>()=>n("div",{class:"Box border-0"},n("div",{class:"Box-row d-flex flex-items-center border-0"},n("span",{class:"flex-auto"},t.name),n("button",{onClick:t.onBtnClick,type:"button",class:"btn btn-sm",name:"button"},t.btnText))));s.props=o;export{s as T};

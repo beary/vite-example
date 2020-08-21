@@ -1,6 +1,6 @@
 # vite-example
 
-Everything starts with **Todo**
+**Todo** is better Hello World!
 
 Live Preview: https://beary.me/vite-example/
 
@@ -9,7 +9,7 @@ $ git clone https://github.com/beary/vite-example
 
 $ cd vite-example
 
-$ npm i
+$ yarn
 
-$ npm run dev
+$ yarn dev
 ```

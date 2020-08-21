@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue'
+import { defineComponent } from 'vue'
 
 interface TodoItemProp {
   name: string
@@ -9,7 +9,7 @@ interface TodoItemProp {
 const initProps = {
   name: String,
   btnText: String,
-  onBtnClick: Function
+  onBtnClick: Function as any
 }
 
 const TodoItem = defineComponent<TodoItemProp>(props => {

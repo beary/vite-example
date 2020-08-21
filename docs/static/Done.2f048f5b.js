@@ -1,1 +1,0 @@
-let e=document.createElement("style");e.innerHTML="",document.head.appendChild(e);import{d as t,j as a,t as d,T as n,a as s,F as o}from"./index.ccf40200.js";import{T as m}from"./TodoItem.7ae1384d.js";var l=t(()=>()=>a(o,null,d.todos.filter(e=>e.status===n.FINISHED).map(e=>a(m,{key:e.id,name:e.name,btnText:"Delete",onBtnClick:()=>s(e.id)}))));export default l;

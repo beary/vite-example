@@ -1,4 +1,9 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, RouteLocationRaw } from 'vue-router'
+
+export const enum RN {
+  TODO = 'todo',
+  DONE = 'done'
+}
 
 export const history = createWebHashHistory()
 export const router = createRouter({
@@ -11,13 +16,15 @@ export const router = createRouter({
     },
     {
       path: '/todo',
-      name: 'todo',
+      name: RN.TODO,
       component: () => import('./views/Todo')
     },
     {
       path: '/done',
-      name: 'done',
+      name: RN.DONE,
       component: () => import('./views/Done')
     }
   ]
 })
+
+export const __HREF__ = (to: RouteLocationRaw) => router.resolve(to).href
