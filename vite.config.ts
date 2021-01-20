@@ -1,8 +1,6 @@
-import { BuildConfig } from 'vite'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
 
-const config: BuildConfig = {
-  base: '',
-  assetsDir: 'static'
-}
-
-export default config
+export default defineConfig({
+  plugins: [vue()]
+})
