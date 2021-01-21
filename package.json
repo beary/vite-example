@@ -4,9 +4,10 @@
   "version": "2.0.0-beta.34",
   "scripts": {
     "dev": "vite",
-    "build": "vuedx-typecheck . && vite build"
+    "build": "#vuedx-typecheck . && \nvite build"
   },
   "dependencies": {
+    "@mdi/js": "^5.9.55",
     "vue": "^3.0.5",
     "vue-router": "^4.0.3"
   },
