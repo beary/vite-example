@@ -1,19 +1,26 @@
 <template>
-  <div>
-    <div v-for="it in todoStore.todoList" :key="it.id">
-      {{ it.name }}
-    </div>
+  <div v-if="todoStore.todoList.length">
+    <TodoItem
+      v-for="it in todoStore.todoList"
+      :key="it.id"
+      :name="it.name"
+      @confirm="finish(it.id)"
+      btn="Done"
+    />
   </div>
   <div class="flex rounded-md">
     <input
       type="text"
-      class="border rounded-none rounded-l-md px-2 py-1 flex-1 focus:outline-none"
+      class="border rounded-none rounded-l-md px-3 py-1.5 flex-1 focus:outline-none"
       placeholder="todo"
       v-model.trim="todo"
     />
     <button
-      class="border rounded-none rounded-r-md px-4 border-green-600 bg-green-600 text-white"
-      @click="addTodo(todo)"
+      class="border rounded-none rounded-r-md px-4 border-green-600 bg-green-600 text-white select-none"
+      @click="
+        addTodo(todo);
+        todo = '';
+      "
     >
       Add
     </button>
@@ -22,15 +29,18 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { addTodo, todoStore } from '../store/todoStore'
+import TodoItem from '../components/TodoItem.vue'
+import { addTodo, finish, todoStore } from '../store/todoStore'
 
 export default defineComponent({
+  components: { TodoItem },
   setup () {
     const todo = ref('')
     return {
       todo,
       todoStore,
-      addTodo
+      addTodo,
+      finish
     }
   }
 })

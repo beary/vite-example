@@ -20,3 +20,21 @@ export const addTodo = (todo: string) => {
     })
   }
 }
+
+export const finish = (id: number) => {
+  const idx = todoStore.todoList.findIndex(it => it.id === id)
+  if (idx !== -1) {
+    todoStore.doneList.push({ ...todoStore.todoList[idx] })
+    todoStore.todoList.splice(idx, 1)
+  }
+}
+
+export const remove = (id: number) => {
+  const idx = todoStore.doneList.findIndex(it => it.id === id)
+  if (idx !== -1) {
+    todoStore.doneList.splice(idx, 1)
+    if (todoStore.doneList.length === 0) {
+      todoStore.id = 0
+    }
+  }
+}
