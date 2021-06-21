@@ -9,7 +9,7 @@ $ git clone https://github.com/beary/vite-example
 
 $ cd vite-example
 
-$ yarn
+$ pnpm i # https://pnpm.io
 
-$ yarn dev
+$ pnpm dev
 ```
