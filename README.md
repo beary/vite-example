@@ -2,7 +2,7 @@
 
 **Todo** is better Hello World!
 
-Live Preview: https://gh.beary.me/vite-example/
+Live Preview: https://beary.github.io/vite-example/
 
 ```bash
 $ git clone https://github.com/beary/vite-example
