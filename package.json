@@ -2,24 +2,24 @@
   "name": "vite-example",
   "private": true,
   "version": "2.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "serve": "vite preview"
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@mdi/js": "^5.9.55",
-    "vue": "^3.1.1",
-    "vue-router": "^4.0.9"
+    "@mdi/js": "7.2.96",
+    "vue": "3.2.47",
+    "vue-router": "4.1.6"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.3",
-    "@vue/compiler-sfc": "^3.1.1",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.2",
-    "typescript": "^4.3.4",
-    "vite": "^2.3.8",
-    "vue-tsc": "^0.2.0"
+    "@vitejs/plugin-vue": "4.1.0",
+    "autoprefixer": "10.4.14",
+    "postcss": "8.4.21",
+    "tailwindcss": "3.2.7",
+    "typescript": "5.0.2",
+    "vite": "4.2.1",
+    "vue-tsc": "1.2.0"
   }
 }
